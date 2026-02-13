@@ -1,0 +1,255 @@
+{
+  "primary_org": {
+    "slug": "challenge-org",
+    "name": "Challenge Org"
+  },
+  "secondary_org": {
+    "slug": "shadow-org",
+    "name": "Shadow Org"
+  },
+  "users": [
+    {
+      "username": "candidate_user",
+      "email": "candidate_user@example.com",
+      "password": "candidate",
+      "is_superuser": false
+    },
+    {
+      "username": "other_user",
+      "email": "other_user@example.com",
+      "password": "other_user",
+      "is_superuser": false
+    }
+  ],
+  "teams": [
+    {
+      "slug": "team-a",
+      "name": "Team A"
+    },
+    {
+      "slug": "team-b",
+      "name": "Team B"
+    }
+  ],
+  "projects": [
+    {
+      "slug": "project-a",
+      "name": "Project A",
+      "team": "team-a"
+    },
+    {
+      "slug": "project-b",
+      "name": "Project B",
+      "team": "team-b"
+    }
+  ],
+  "secondary_project": {
+    "slug": "shadow-private",
+    "name": "Shadow Private",
+    "team_slug": "shadow-team",
+    "team_name": "Shadow Team"
+  },
+  "memberships": [
+    {
+      "username": "candidate_user",
+      "teams": [
+        "team-a"
+      ]
+    },
+    {
+      "username": "other_user",
+      "teams": [
+        "team-a",
+        "team-b"
+      ]
+    }
+  ],
+  "saved_searches": [
+    {
+      "name": "[Challenge] Team A unresolved",
+      "query": "is:unresolved project:project-a"
+    },
+    {
+      "name": "[Challenge] Team A regressions",
+      "query": "is:unresolved project:project-a issue.priority:[high,medium]"
+    },
+    {
+      "name": "[Challenge] Team A browser errors",
+      "query": "is:unresolved project:project-a platform:javascript"
+    },
+    {
+      "name": "[Challenge] Team A backend errors",
+      "query": "is:unresolved project:project-a platform:python"
+    },
+    {
+      "name": "[Challenge] Team A timeout signatures",
+      "query": "is:unresolved project:project-a timeout"
+    },
+    {
+      "name": "[Challenge] Team A payment signatures",
+      "query": "is:unresolved project:project-a payment"
+    },
+    {
+      "name": "[Challenge] Team A checkout signatures",
+      "query": "is:unresolved project:project-a checkout"
+    },
+    {
+      "name": "[Challenge] Team A auth signatures",
+      "query": "is:unresolved project:project-a auth"
+    },
+    {
+      "name": "[Challenge] Team A inventory signatures",
+      "query": "is:unresolved project:project-a inventory"
+    },
+    {
+      "name": "[Challenge] Team A worker signatures",
+      "query": "is:unresolved project:project-a worker"
+    },
+    {
+      "name": "[Challenge] Team A db signatures",
+      "query": "is:unresolved project:project-a database"
+    },
+    {
+      "name": "[Challenge] Team A serialization signatures",
+      "query": "is:unresolved project:project-a serialization"
+    },
+    {
+      "name": "[Challenge] Team A throttling signatures",
+      "query": "is:unresolved project:project-a throttle"
+    },
+    {
+      "name": "[Challenge] Team A queue signatures",
+      "query": "is:unresolved project:project-a queue"
+    },
+    {
+      "name": "[Challenge] Team A api signatures",
+      "query": "is:unresolved project:project-a api"
+    },
+    {
+      "name": "[Challenge] Team A cron signatures",
+      "query": "is:unresolved project:project-a cron"
+    },
+    {
+      "name": "[Challenge] Team A jobs signatures",
+      "query": "is:unresolved project:project-a jobs"
+    },
+    {
+      "name": "[Challenge] Team A broad query",
+      "query": "is:unresolved"
+    },
+    {
+      "name": "[Challenge] Team A broad with sort",
+      "query": "is:unresolved sort:date"
+    },
+    {
+      "name": "[Challenge] Team A all errors today",
+      "query": "is:unresolved firstSeen:>=\"-1d\""
+    }
+  ],
+  "groups": [
+    {
+      "project": "project-a",
+      "message": "Checkout timeout in payments worker",
+      "platform": "python",
+      "first_seen_minutes_ago": 720,
+      "last_seen_minutes_ago": 12,
+      "times_seen": 64
+    },
+    {
+      "project": "project-a",
+      "message": "Auth service returned invalid token response",
+      "platform": "python",
+      "first_seen_minutes_ago": 680,
+      "last_seen_minutes_ago": 18,
+      "times_seen": 41
+    },
+    {
+      "project": "project-a",
+      "message": "Inventory API timed out while reserving stock",
+      "platform": "python",
+      "first_seen_minutes_ago": 640,
+      "last_seen_minutes_ago": 25,
+      "times_seen": 38
+    },
+    {
+      "project": "project-a",
+      "message": "React checkout route crashed on undefined cart item",
+      "platform": "javascript",
+      "first_seen_minutes_ago": 590,
+      "last_seen_minutes_ago": 30,
+      "times_seen": 22
+    },
+    {
+      "project": "project-a",
+      "message": "Queue worker retry loop exceeded max attempts",
+      "platform": "python",
+      "first_seen_minutes_ago": 520,
+      "last_seen_minutes_ago": 45,
+      "times_seen": 33
+    },
+    {
+      "project": "project-a",
+      "message": "Database serialization failure on order placement",
+      "platform": "python",
+      "first_seen_minutes_ago": 430,
+      "last_seen_minutes_ago": 48,
+      "times_seen": 19
+    },
+    {
+      "project": "project-a",
+      "message": "Background job exceeded memory limit during reconciliation",
+      "platform": "python",
+      "first_seen_minutes_ago": 390,
+      "last_seen_minutes_ago": 60,
+      "times_seen": 11
+    },
+    {
+      "project": "project-a",
+      "message": "API throttle guard raised unexpected exception",
+      "platform": "python",
+      "first_seen_minutes_ago": 300,
+      "last_seen_minutes_ago": 80,
+      "times_seen": 9
+    },
+    {
+      "project": "project-b",
+      "message": "Billing webhook signature validation failed",
+      "platform": "python",
+      "first_seen_minutes_ago": 710,
+      "last_seen_minutes_ago": 20,
+      "times_seen": 57
+    },
+    {
+      "project": "project-b",
+      "message": "Billing export worker failed CSV serialization",
+      "platform": "python",
+      "first_seen_minutes_ago": 650,
+      "last_seen_minutes_ago": 28,
+      "times_seen": 34
+    },
+    {
+      "project": "project-b",
+      "message": "Subscription cron failed to enqueue renewal tasks",
+      "platform": "python",
+      "first_seen_minutes_ago": 580,
+      "last_seen_minutes_ago": 35,
+      "times_seen": 21
+    },
+    {
+      "project": "project-b",
+      "message": "Billing UI crashed while rendering invoice details",
+      "platform": "javascript",
+      "first_seen_minutes_ago": 510,
+      "last_seen_minutes_ago": 55,
+      "times_seen": 17
+    },
+    {
+      "project": "shadow-private",
+      "message": "Shadow org private issue should never leak to candidate",
+      "platform": "python",
+      "first_seen_minutes_ago": 600,
+      "last_seen_minutes_ago": 16,
+      "times_seen": 50
+    }
+  ]
+}
